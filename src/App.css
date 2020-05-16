@@ -1,38 +1,65 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-wrapper{
+  position: fixed;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.marginTop{
+  margin-top: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.font-size18{
+  font-size: 18px;
+  font-weight: bold;
+}
+.font-size20{
+  font-size: 20px;
+  color: cornflowerblue;
+  font-weight: bold;
+}
+.list{
+  background-color: cornflowerblue;
+  padding: 15px;
+  margin-bottom: 10px !important;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  border-radius: 10px;
+  border-left: 8px solid black;
+}
+.task{
   color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial;
 }
 
-.App-link {
-  color: #61dafb;
+[type="checkbox"]:checked + span:not(.lever):before {
+  border-right: 2px solid black !important;
+  border-bottom: 2px solid black !important;
+  text-decoration: line-through;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-body{
+  overflow-y: auto;
+  height: calc(100vh - 300px);
+  display: inline-block;
+  width: 100%;
+}
+.list-body::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+.list-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+/* Handle */
+.list-body::-webkit-scrollbar-thumb {
+  background: cornflowerblue;
+  border-radius: 6px;
+}
+/* Handle on hover */
+.list-body::-webkit-scrollbar-thumb:hover {
+  background: deepskyblue;
 }
